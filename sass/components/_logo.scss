@@ -1,0 +1,21 @@
+.logo {
+  display: inline-block;
+  text-decoration: none;
+
+  color: $logoBlackColor;
+
+  font-family: $logoText, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo__start-text {
+  color: $accentColor;
+}
+
+.site-footer__logo {
+  color: $inverseTextColor;
+  margin-bottom: 20px;
+}

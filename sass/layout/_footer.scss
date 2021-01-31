@@ -1,0 +1,36 @@
+.site-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $darkBgColor;
+}
+
+.site-footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.site-footer__block-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: $inverseTextColor;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.site-footer__address-block {
+  min-width: 231px;
+}
+
+.site-footer__social-block {
+  margin-left: 70px;
+}
+
+.site-footer__subscribe-block {
+  flex-grow: 1;
+  margin-left: 93px;
+}

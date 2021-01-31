@@ -1,0 +1,72 @@
+//main button
+
+.main-button {
+  @include centeredFlex(inline-flex);
+  min-width: 200px;
+  padding: 8px 20px;
+
+  background-color: $accentColor;
+  color: $inverseTextColor;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  @include transitionMain(background-color, color, border);
+
+  &:hover,
+  &:focus {
+    background-color: $inverseTextColor;
+    color: $accentColor;
+    border: 2px solid $accentColor;
+  }
+}
+
+//portfolio filter button
+
+.portfolio-button {
+  display: inline-block;
+  min-width: 73px;
+  padding: 6px 22px;
+
+  background-color: $btnBgColor;
+  color: $titleTextColor;
+  border-radius: 4px;
+  border: none;
+  outline: transparent;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include transitionMain(background-color, color, box-shadow);
+
+  &--active,
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+    color: $inverseTextColor;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &--active:focus {
+    border: 2px solid black;
+    margin: -2px -2px;
+  }
+}

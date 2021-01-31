@@ -1,0 +1,45 @@
+.hero {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  background-color: $heroBgColor;
+}
+
+.hero__overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0;
+
+  border: 1px solid $borderBlackColor;
+  background-image: linear-gradient(
+      to right,
+      $overlayShadingColor,
+      $overlayShadingColor
+    ),
+    url(../images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+}
+
+.hero__title-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.hero__title {
+  margin: 0;
+
+  color: $inverseTextColor;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
