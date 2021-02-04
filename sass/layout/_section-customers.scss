@@ -1,12 +1,19 @@
 .clients__list {
   display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
 .clients__item {
-  flex-basis: calc((100% - 5 * 30px) / 6);
+  flex-basis: calc(100% / 2 - 30px);
+  margin: 15px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 6 - 30px);
   }
 }
 
@@ -21,8 +28,6 @@
 
   filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
 
-  // transition: border-color 500ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   color 500ms cubic-bezier(0.4, 0, 0.2, 1);
   @include transitionMain(border-color, color);
 
   &:hover,

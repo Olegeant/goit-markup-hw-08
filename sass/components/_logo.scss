@@ -1,14 +1,18 @@
 .logo {
   display: inline-block;
-  text-decoration: none;
 
   color: $logoBlackColor;
+  text-decoration: none;
 
   font-family: $logoText, sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+
+  @media screen and (max-width: 767px) {
+    margin: 16px 0;
+  }
 }
 
 .logo__start-text {
@@ -16,6 +20,8 @@
 }
 
 .site-footer__logo {
-  color: $inverseTextColor;
+  padding: 0;
+  margin-top: 0;
   margin-bottom: 20px;
+  color: $inverseTextColor;
 }

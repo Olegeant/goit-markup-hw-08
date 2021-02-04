@@ -3,14 +3,26 @@
 }
 
 .team__list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team__item {
-  flex-basis: calc((100% - 3 * 30px) / 4);
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -49,5 +61,9 @@
 }
 
 .person__social-container {
-  padding: 16px 0 30px;
+  padding: 16px 0 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }

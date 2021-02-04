@@ -6,7 +6,21 @@
 
 .site-footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 .site-footer__block-title {
@@ -23,14 +37,16 @@
 }
 
 .site-footer__address-block {
-  min-width: 231px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .site-footer__social-block {
-  margin-left: 70px;
-}
-
-.site-footer__subscribe-block {
-  flex-grow: 1;
-  margin-left: 93px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 70px;
+  }
 }
